@@ -1,0 +1,2 @@
+2021-08-18T04:43:21+00:00 CRITICAL Out of memory (allocated 27262976) (tried to allocate 32768 bytes) in C:\xampp\htdocs\khangdien\wp-content\plugins\woocommerce\packages\woocommerce-rest-api\src\Controllers\Version2\class-wc-rest-system-status-v2-controller.php on line 88
+

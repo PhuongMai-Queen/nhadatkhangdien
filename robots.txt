@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+https://khangdienhome.net/sitemap_index.xml
