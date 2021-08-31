@@ -27,8 +27,6 @@ define( 'FORCE_SSL_ADMIN', true ); // Redirect All HTTP Page Requests to HTTPS -
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('WP_CACHE', true);
-define( 'WPCACHEHOME', 'C:\xampp\htdocs\khangdien\wp-content\plugins\wp-super-cache/' );
 define('DB_NAME', 'khangdien_dbwp2');
 
 /** MySQL database username */

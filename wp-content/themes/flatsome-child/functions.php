@@ -503,3 +503,92 @@ add_action( 'wp_enqueue_scripts', 'my_custom_script_load' );
 function my_custom_script_load(){
 	wp_enqueue_script( 'my-custom-script', get_stylesheet_directory_uri() . '/assets/js/custom.js', array( 'jquery' ) );
 }
+function create_gallery_product_box_congdongblog()
+{
+    global $product;
+    $product_cat =  get_the_terms($product->get_ID(), 'product_cat' );
+    // var_dump($product_cat);
+    if ( $product_cat && ! is_wp_error( $product_cat ) ) {
+        echo '<span class="isures-cate--label"><a href=' . esc_url( get_category_link( $product_cat[0]->term_id ) ) . ' title="Danh mục '.$product_cat[0]->name.'">' . $product_cat[0]->name . '</a></span>';
+    }
+    $attachment_ids = $product->get_gallery_image_ids();
+    $count = count($attachment_ids);
+    if ($attachment_ids) {
+        $thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id($product->get_ID()));
+        $size_full = wp_get_attachment_image_src(get_post_thumbnail_id($product->get_ID()), "full");
+        ?>
+         <div class="carousel slider product-box-slider isures-thumb--wrap" data-flickity-options='{
+            "cellAlign": "left",
+            "imagesLoaded": true,
+            "lazyLoad": 1,
+            "freeScroll": true,
+            "wrapAround": true,
+            "autoPlay": 6000,
+            "pauseAutoPlayOnHover" : true,
+            "prevNextButtons": true,
+            "contain" : true,
+            "adaptiveHeight" : true,
+            "dragThreshold" : 10,
+            "percentPosition": true,
+            "pageDots": false,
+            "rightToLeft": false,
+            "draggable": true,
+            "selectedAttraction": 0.1,
+            "parallax" : 0,
+            "friction": 0.6
+             }'
+            >
+        <?php
+
+        echo '<div class="isures-thumb--items active"><img src="' . $thumbnail[0] . '" data-full="' . $size_full[0] . '"></div>';
+        $i = 0;
+        foreach ($attachment_ids as $attachment_id) {
+                echo '<div class="isures-thumb--items">';
+                echo '<img src="' . wp_get_attachment_image_src($attachment_id, 'thumbnail')[0] . '" data-full="' . wp_get_attachment_image_src($attachment_id, 'full')[0] . '">';
+                echo '</div>';
+            $i++;
+        }
+
+        echo '</div>';
+    }
+}
+add_action('woocommerce_before_shop_loop_item_title', 'create_gallery_product_box_congdongblog');
+
+add_action('wp_footer','add_script_footer_gallery');
+
+function add_script_footer_gallery(){
+    ?>
+    <script>
+        jQuery('body').on('mouseenter', '.isures-thumb--items', function () {
+
+            let change_box = jQuery(this).closest('.product-small');
+            let img_this = jQuery(this).find('img').attr('data-full');
+            jQuery(change_box).find('.box-image img').attr('src', img_this);
+            jQuery(change_box).find('.box-image img').attr('srcset', img_this);
+            jQuery(change_box).find('.isures-thumb--items').removeClass('active');
+            jQuery(this).addClass('active');
+        });
+
+    </script>
+    <?php
+}
+
+function netweb_wp_corenavi($custom_query = null, $paged = null) {
+    global $wp_query;
+    if($custom_query) $main_query = $custom_query;
+    else $main_query = $wp_query;
+    $paged = ($paged) ? $paged : get_query_var('paged');
+    $big = 999999999;
+    $total = isset($main_query->max_num_pages)?$main_query->max_num_pages:'';
+    if($total > 1) echo '<div class="pagenavi">';
+    echo paginate_links( array(
+        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+        'format' => '?paged=%#%',
+        'current' => max( 1, $paged ),
+        'total' => $total,
+        'mid_size' => '3',
+        'prev_text'    => __('<i class="icon-angle-left"></i>','netweb'),
+        'next_text'    => __('<i class="icon-angle-right"></i>','netweb'),
+    ) );
+    if($total > 1) echo '</div>';
+}

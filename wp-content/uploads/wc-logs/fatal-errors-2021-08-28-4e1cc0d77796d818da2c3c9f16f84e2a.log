@@ -1,0 +1,22 @@
+2021-08-28T07:36:01+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Query as array in C:\xampp\htdocs\nhadatkhangdien\wp-content\themes\flatsome\inc\shortcodes\ux_products.php:292
+Stack trace:
+#0 C:\xampp\htdocs\nhadatkhangdien\wp-includes\shortcodes.php(325): ux_products(Array, '', 'ux_products')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\xampp\htdocs\nhadatkhangdien\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(ux_pro...', 'do_shortcode_ta...', '[ux_products st...')
+#3 C:\xampp\htdocs\nhadatkhangdien\wp-content\themes\flatsome\inc\helpers\helpers-shortcode.php(203): do_shortcode('[ux_products st...')
+#4 C:\xampp\htdocs\nhadatkhangdien\wp-includes\class-wp-hook.php(288): flatsome_contentfix('[ux_products st...')
+#5 C:\xampp\htdocs\nhadatkhangdien\wp-includes\plugin.php(206): WP_Hook->apply_filters('[ux_products st...', Array)
+#6 C:\xampp\htdocs\nhadatkhangdien\wp-includes\post-template.php(253): apply_filters('the_content', '[ux_products st...')
+#7 C:\xampp\htdocs\nhadatkhangdien\wp-content\themes\f in C:\xampp\htdocs\nhadatkhangdien\wp-content\themes\flatsome\inc\shortcodes\ux_products.php on line 292
+
+2021-08-28T07:36:16+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Query as array in C:\xampp\htdocs\nhadatkhangdien\wp-content\themes\flatsome\inc\shortcodes\ux_products.php:292
+Stack trace:
+#0 C:\xampp\htdocs\nhadatkhangdien\wp-includes\shortcodes.php(325): ux_products(Array, '', 'ux_products')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\xampp\htdocs\nhadatkhangdien\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(ux_pro...', 'do_shortcode_ta...', '[ux_products st...')
+#3 C:\xampp\htdocs\nhadatkhangdien\wp-content\themes\flatsome\inc\helpers\helpers-shortcode.php(203): do_shortcode('[ux_products st...')
+#4 C:\xampp\htdocs\nhadatkhangdien\wp-includes\class-wp-hook.php(288): flatsome_contentfix('[ux_products st...')
+#5 C:\xampp\htdocs\nhadatkhangdien\wp-includes\plugin.php(206): WP_Hook->apply_filters('[ux_products st...', Array)
+#6 C:\xampp\htdocs\nhadatkhangdien\wp-includes\post-template.php(253): apply_filters('the_content', '[ux_products st...')
+#7 C:\xampp\htdocs\nhadatkhangdien\wp-content\themes\f in C:\xampp\htdocs\nhadatkhangdien\wp-content\themes\flatsome\inc\shortcodes\ux_products.php on line 292
+

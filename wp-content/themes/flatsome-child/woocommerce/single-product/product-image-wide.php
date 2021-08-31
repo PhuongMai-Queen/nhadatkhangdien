@@ -32,21 +32,31 @@ if(is_rtl()) $rtl = 'true';
     </div>
   </div>
 
-  <figure class="woocommerce-product-gallery__wrapper <?php echo implode(' ', $slider_classes); ?>"
-        data-flickity-options='{
-              "cellAlign": "center",
-              "wrapAround": true,
-              "autoPlay": true,
-              "prevNextButtons":true,
-              "adaptiveHeight": true,
-              "imagesLoaded": true,
-              "lazyLoad": 1,
-              "dragThreshold" : 15,
-              "pageDots": false,
+  <div class="custom-product-gallery woocommerce-product-gallery__wrapper slider
+  slider-nav-dots-dashes-spaced slider-nav-simple slider-nav-large
+  slider-nav-light slider-style-container is-draggable
+  flickity-enabled <?php echo implode(' ', $slider_classes); ?>"
+       data-flickity-options='{
+            "cellAlign": "center",
+            "imagesLoaded": true,
+            "lazyLoad": 1,
+            "freeScroll": false,
+            "wrapAround": true,
+            "autoPlay": 6000,
+            "pauseAutoPlayOnHover" : true,
+            "prevNextButtons": true,
+            "contain" : true,
+            "adaptiveHeight" : true,
+            "dragThreshold" : 10,
+            "percentPosition": true,
+            "pageDots": true,
+            "rightToLeft": false,
+            "draggable": true,
+            "selectedAttraction": 0.1,
+            "parallax" : 0,
+            "friction": 0.6,
               "rightToLeft": <?php echo $rtl; ?>
-       }'
-      style="background-color: #333;"
-       >
+       }' tabindex="0">
     <?php
     $attributes = array(
       'title'             => $image_title,
@@ -69,7 +79,7 @@ if(is_rtl()) $rtl = 'true';
 
     do_action( 'woocommerce_product_thumbnails' );
     ?>
-  </figure>
+  </div>
 
   <div class="loading-spin centered dark"></div>
 

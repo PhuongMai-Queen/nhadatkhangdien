@@ -50,11 +50,11 @@ global $product;
 						dynamic_sidebar( 'shop-sidebar' );
 					}
 					?>
+
 				</div>
 			</div>
 
 	</div>
-
 	<?php do_action( 'woocommerce_after_single_product' ); ?>
 
 </div>

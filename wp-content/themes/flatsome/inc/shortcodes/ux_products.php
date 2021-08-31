@@ -291,7 +291,7 @@ function ux_products($atts, $content = null, $tag = '' ) {
 								<div class="<?php echo implode(' ', $classes_image); ?>" <?php echo get_shortcode_inline_css($css_image_height); ?>>
 									<a href="<?php echo get_the_permalink(); ?>">
 										<?php
-											if($back_image) flatsome_woocommerce_get_alt_product_thumbnail($image_size);
+//											if($back_image) flatsome_woocommerce_get_alt_product_thumbnail($image_size);
 											echo woocommerce_get_product_thumbnail($image_size);
 										?>
 									</a>

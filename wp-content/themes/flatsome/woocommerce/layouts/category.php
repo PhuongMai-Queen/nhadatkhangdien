@@ -1,19 +1,19 @@
 <div class="row category-page-row">
 
-		<div class="col large-3 hide-for-medium <?php flatsome_sidebar_classes(); ?>">
-			<?php flatsome_sticky_column_open( 'category_sticky_sidebar' ); ?>
-			<div id="shop-sidebar" class="sidebar-inner col-inner">
-				<?php
-				  if(is_active_sidebar('shop-sidebar')) {
-				  		dynamic_sidebar('shop-sidebar');
-				  	} else{ echo '<p>You need to assign Widgets to <strong>"Shop Sidebar"</strong> in <a href="'.get_site_url().'/wp-admin/widgets.php">Appearance > Widgets</a> to show anything here</p>';
-				  }
-				?>
-			</div>
-			<?php flatsome_sticky_column_close( 'category_sticky_sidebar' ); ?>
-		</div>
+<!--		<div class="col large-3 hide-for-medium --><?php //flatsome_sidebar_classes(); ?><!--">-->
+<!--			--><?php //flatsome_sticky_column_open( 'category_sticky_sidebar' ); ?>
+<!--			<div id="shop-sidebar" class="sidebar-inner col-inner">-->
+<!--				--><?php
+//				  if(is_active_sidebar('shop-sidebar')) {
+//				  		dynamic_sidebar('shop-sidebar');
+//				  	} else{ echo '<p>You need to assign Widgets to <strong>"Shop Sidebar"</strong> in <a href="'.get_site_url().'/wp-admin/widgets.php">Appearance > Widgets</a> to show anything here</p>';
+//				  }
+//				?>
+<!--			</div>-->
+<!--			--><?php //flatsome_sticky_column_close( 'category_sticky_sidebar' ); ?>
+<!--		</div>-->
 
-		<div class="col large-9">
+		<div class="large-12 col">
 		<?php
 		/**
 		 * Hook: woocommerce_before_main_content.

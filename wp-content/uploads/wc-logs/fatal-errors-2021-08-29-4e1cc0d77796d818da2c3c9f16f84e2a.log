@@ -1,0 +1,49 @@
+2021-08-29T12:45:19+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function my_custom_slider(), 0 passed in C:\xampp\htdocs\nhadatkhangdien\wp-content\themes\flatsome\page-right-sidebar.php on line 36 and exactly 1 expected in C:\xampp\htdocs\nhadatkhangdien\wp-content\themes\flatsome-child\functions.php:576
+Stack trace:
+#0 C:\xampp\htdocs\nhadatkhangdien\wp-content\themes\flatsome\page-right-sidebar.php(36): my_custom_slider()
+#1 C:\xampp\htdocs\nhadatkhangdien\wp-includes\template-loader.php(98): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\nhadatkhangdien\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\nhadatkhangdien\index.php(17): require('C:\\xampp\\htdocs...')
+#4 {main}
+  thrown in C:\xampp\htdocs\nhadatkhangdien\wp-content\themes\flatsome-child\functions.php on line 576
+
+2021-08-29T13:15:16+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function my_custom_slider(), 0 passed in C:\xampp\htdocs\nhadatkhangdien\wp-content\themes\flatsome\page-right-sidebar.php on line 38 and exactly 1 expected in C:\xampp\htdocs\nhadatkhangdien\wp-content\themes\flatsome-child\functions.php:576
+Stack trace:
+#0 C:\xampp\htdocs\nhadatkhangdien\wp-content\themes\flatsome\page-right-sidebar.php(38): my_custom_slider()
+#1 C:\xampp\htdocs\nhadatkhangdien\wp-includes\template-loader.php(98): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\nhadatkhangdien\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\nhadatkhangdien\index.php(17): require('C:\\xampp\\htdocs...')
+#4 {main}
+  thrown in C:\xampp\htdocs\nhadatkhangdien\wp-content\themes\flatsome-child\functions.php on line 576
+
+2021-08-29T14:23:23+00:00 CRITICAL Uncaught Error: Call to undefined function pagination_bar() in C:\xampp\htdocs\nhadatkhangdien\wp-content\themes\flatsome\page-right-sidebar.php:30
+Stack trace:
+#0 C:\xampp\htdocs\nhadatkhangdien\wp-includes\template-loader.php(98): include()
+#1 C:\xampp\htdocs\nhadatkhangdien\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\nhadatkhangdien\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\nhadatkhangdien\wp-content\themes\flatsome\page-right-sidebar.php on line 30
+
+2021-08-29T15:19:57+00:00 CRITICAL Uncaught Error: Call to undefined function wp_pagenavi() in C:\xampp\htdocs\nhadatkhangdien\wp-content\themes\flatsome\page-right-sidebar.php:53
+Stack trace:
+#0 C:\xampp\htdocs\nhadatkhangdien\wp-includes\template-loader.php(98): include()
+#1 C:\xampp\htdocs\nhadatkhangdien\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\nhadatkhangdien\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\nhadatkhangdien\wp-content\themes\flatsome\page-right-sidebar.php on line 53
+
+2021-08-29T15:30:16+00:00 CRITICAL Cannot redeclare get_the_posts_navigation() (previously declared in C:\xampp\htdocs\nhadatkhangdien\wp-includes\link-template.php:2643) in C:\xampp\htdocs\nhadatkhangdien\wp-content\themes\flatsome-child\functions.php on line 598
+
+2021-08-29T15:30:17+00:00 CRITICAL Cannot redeclare get_the_posts_navigation() (previously declared in C:\xampp\htdocs\nhadatkhangdien\wp-includes\link-template.php:2643) in C:\xampp\htdocs\nhadatkhangdien\wp-content\themes\flatsome-child\functions.php on line 598
+
+2021-08-29T17:14:22+00:00 CRITICAL Cannot redeclare get_the_category() (previously declared in C:\xampp\htdocs\nhadatkhangdien\wp-includes\category-template.php:76) in C:\xampp\htdocs\nhadatkhangdien\wp-content\themes\flatsome-child\functions.php on line 579
+
+2021-08-29T17:15:03+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wp_get_object_terms(), 0 passed in C:\xampp\htdocs\nhadatkhangdien\wp-content\themes\flatsome\page-right-sidebar.php on line 81 and at least 2 expected in C:\xampp\htdocs\nhadatkhangdien\wp-includes\taxonomy.php:1969
+Stack trace:
+#0 C:\xampp\htdocs\nhadatkhangdien\wp-content\themes\flatsome\page-right-sidebar.php(81): wp_get_object_terms()
+#1 C:\xampp\htdocs\nhadatkhangdien\wp-includes\template-loader.php(98): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\nhadatkhangdien\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\nhadatkhangdien\index.php(17): require('C:\\xampp\\htdocs...')
+#4 {main}
+  thrown in C:\xampp\htdocs\nhadatkhangdien\wp-includes\taxonomy.php on line 1969
+

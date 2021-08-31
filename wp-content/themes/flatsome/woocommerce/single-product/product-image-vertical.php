@@ -43,7 +43,7 @@ if(get_theme_mod('product_zoom', 0)){
 }
 
 ?>
-<div class="row row-small">
+<div class="row row-small">12345
 <div class="col large-10">
 <?php do_action('flatsome_before_product_images'); ?>
 
